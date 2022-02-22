@@ -18,7 +18,7 @@ Installation
           
           `RUN pip install -e git+https://gitlab.ubiwhere.com/lsantos/upgranada-ckan-styling-extension@master#egg=ckanext-style_granada`
      
-     3. Check if the plugin ``citiesQuest`` exists in the ``ckan.plugins`` file. If not, add it.
+     3. Check if the plugin ``style_granada`` exists in the ``ckan.plugins`` file. If not, add it.
    
      4. Run docker-compose with the necessary modifications on the config files (.env, production.ini, ci/cd):
 
@@ -33,7 +33,7 @@ Installation
 
           `RUN pip install -e git+https://gitlab.ubiwhere.com/lsantos/upgranada-ckan-styling-extension@master#egg=ckanext-style_granada`
 
-     3. Add the plugin ``citiesQuest`` to the ``ckan.plugins`` setting in your CKAN config file
+     3. Add the plugin ``style_granada`` to the ``ckan.plugins`` setting in your CKAN config file
 
      4. Rerun or Restart CKAN container:
 
@@ -41,7 +41,7 @@ Installation
 
           `docker container start/restart <name_of_ckan_container>`
 
-- To install ckanext-citiesQuest on local CKAN project:
+- To install ckanext-style_granada on local CKAN project:
 
      1. Activate your CKAN virtual environment, for example::
 
