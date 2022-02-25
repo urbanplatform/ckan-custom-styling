@@ -16,6 +16,7 @@ RUN apk add --no-cache \
     libffi-dev \
     libressl-dev \
     libxslt \
+    libmagic \
     uwsgi \
     uwsgi-http \
     uwsgi-corerouter \
