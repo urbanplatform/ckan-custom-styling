@@ -1,0 +1,293 @@
+@font-face {
+    font-family: "gotham-black";
+    src: url("/base/font/gotham/gotham-black.ttf");
+}
+
+@font-face {
+    font-family: "gotham-bold";
+    src: url("/base/font/gotham/gotham-bold.ttf");
+}
+
+@font-face {
+    font-family: "gotham-book";
+    src: url("/base/font/gotham/gotham-book.ttf");
+}
+
+@font-face {
+    font-family: "gotham-medium";
+    src: url("/base/font/gotham/gotham-medium.ttf");
+}
+
+@font-face {
+    font-family: "gotham-light";
+    src: url("/base/font/gotham/gotham-light.ttf");
+}
+
+@font-face {
+    font-family: "gotham-thin";
+    src: url("/base/font/gotham/gotham-thin.ttf");
+}
+
+*{font-family:'gotham-book';}
+body, .masthead, .site-footer {
+    background:#fff;
+}
+a {
+    color:#2E479A;
+}
+#field-lang-select {
+    background:unset;
+    border:unset;
+    outline:unset;
+    margin-left:5px;
+    max-width:120px;
+}
+.newLang img {
+    width: 33px;
+    border-radius: 3px;
+    height: 21px;
+    border: 1px solid #000;
+    object-fit: cover;
+}
+.newLang {
+    margin-left:20px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #2E479A;
+    border-color: #2E479A;
+}
+.btn-primary:hover {
+    background-color: #1d2c60;
+    border-color: #1d2c60;
+}
+.account-masthead {
+    background:#000 !important;
+}
+.account-masthead .account ul li a:hover {
+    background-color:#2e479a;
+}
+.wrapper, .wrapper:before {
+    border:none !important;
+}
+.lang-select label, .lang-select select, .lang-select .lang-container {
+    color:#000;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #fff;
+    cursor: default;
+    background-color: #314999 !important;
+    border: 1px solid #fff;
+    border-bottom-color: transparent;
+}
+.page-header .nav-tabs li.active a, .page-header .nav-tabs a:hover {
+    background-color: #586cae;
+    color:#fff;
+}
+.select2-container {
+    max-width: 130px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #fff;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-bottom-color: transparent;
+}
+.wrapper {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    -webkit-box-shadow:none;
+    box-shadow: none;
+    position: relative;
+    min-height: 300px;
+    background-color: #fff;
+}
+.module:first-child .module-heading {
+    border-top-width: 0;
+    padding: 24px;
+    border-radius: 4px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #2E479A;
+    color: #fff;
+}
+.module-heading {
+    border:none !important;
+    border-radius:4px !important;
+}
+div[role="main"] {
+    min-height: 82vh !important;
+}
+.form-control {
+    box-shadow: unset !important;
+}
+.masthead {
+    box-shadow: inset 0px -1px 0px rgba(228, 223, 214, 0.25);
+}
+.masthead .site-search input {
+    width: 230px;
+    padding: 10px 12px;
+    box-shadow: none;
+}
+.lang-select label{
+    display:none;
+}
+.masthead .navbar-collapse {
+    padding: 10px 0;
+    display: flex !important;
+    align-items: center;
+}
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li a:focus, .masthead .navigation .nav-pills li.active a {
+    background-color: #2e479a;
+    color: #fff !important;
+}
+.masthead a {color: #000 !important;}
+/* .account-masthead {display:none;} */
+.homepage [role=main] {
+    min-height: 350px !important;
+    padding:50px 0;
+}
+.homepage [role=main]:not(.hero) {
+    background: #f2ede5 !important;
+}
+.homepage .module-search {
+    padding: 0px;
+    color: #fff;
+    background: transparent;
+}
+.homepage .module-search .module-content {
+    border-radius: 3px 3px 0 0;
+    background-color: #2E479A;
+    border-bottom: none;
+    padding: 32px 24px;
+}
+.homepage .module-search .module-content .heading {
+    margin-bottom:40px;
+}
+.homepage .module-search .search-giant {
+    margin:0 !important;
+}
+.homepage .module-search .tags {
+    padding: 24px;
+    border-radius: 0 0 3px 3px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #2E479A;
+}
+.homepage .module-search .search-giant input {
+    border-color: #fff;
+}
+.homepage .module-search .tags h3 {
+    padding:0;
+    margin:0;
+}
+
+.search-form .search-input.search-giant button i {
+    font-size: 16px;
+    width: 16px;
+}
+.search-form .search-input.search-giant input {
+    font-size: 14px;
+    padding: 17px 12px;
+}
+.search-form .search-input button {
+    top:60%;
+}
+.box {
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgba(229, 229, 229, 0.5);
+    box-shadow: none;
+    padding:48px 32px;
+}
+.box p {
+    margin-bottom: 40px;
+}
+.media-overlay .media-heading {
+    background:#FAFAFA;
+    color:#333;
+}
+.page-heading {
+    color:#2E479A;
+    margin-bottom:32px;
+    font-family: 'gotham-medium';
+}
+.hero, [role=main], .main {
+    background:transparent !important;
+}
+.granada-style-footer {
+    font-family:serif;
+    color:#dda818;
+    font-style:italic;
+    font-weight:700;
+    font-size:18px;
+}
+.bottom-end {
+    background-color:#f2ede5;
+    padding:24px 0;
+}
+.bottom-end img {
+    width:55px;
+    height:55px;
+    object-fit:contain;
+    margin-right:44px;
+}
+.d-flex {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.right {
+    font-size:16px;
+}
+.nav > li > a {
+    padding:10px 20px;
+}
+.masthead .logo img {
+    margin-top: 7px;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.footer-links ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.footer-links ul li a {
+    color: #000;
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.footer .logos {
+    display: flex;
+    justify-content: center;
+}
+.footer .logos img {
+    margin: 20px;
+    object-fit: contain;
+}
+.footer {
+    z-index: 100;
+    position: static;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding-top: 1em;
+    background-color: #ffffff;
+    border-top: none;
+    margin-top: 0;
+    height: auto;
+    padding-top: 30px;
+    font-family: 'Gotham', sans-serif !important;
+}

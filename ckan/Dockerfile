@@ -25,7 +25,7 @@ RUN pip install -e git+https://github.com/CodeForAfrica/ckanext-social#egg=ckane
     pip install -e git+https://github.com/conwetlab/ckanext-privatedatasets.git#egg=ckanext-privatedatasets
 
 # Install the extension(s) you wrote for your own project
-RUN pip install -e git+https://github.com/urbanplatform/ckan-custom-styling.git#egg=ckanext-styleGranada
+# RUN pip install -e git+https://github.com/urbanplatform/ckan-custom-styling.git#egg=ckanext-styleGranada
 
 RUN pip install ckantoolkit
 
