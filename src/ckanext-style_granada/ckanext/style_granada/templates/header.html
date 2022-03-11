@@ -88,6 +88,7 @@
           ('group_index', _('Groups')), ('home.about', _('About')) ) }} {% endblock %}
         </ul>
       </nav>
+      {% snippet "snippets/language_selector.html" %}
       {% endblock %} {% block header_site_search %}
       <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
         <div class="field">
@@ -97,7 +98,7 @@
         </div>
       </form>
       {% endblock %}
-      {% snippet "snippets/language_selector.html" %}
+      
     </div>
   </div>
 </header>
