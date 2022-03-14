@@ -1,19 +1,16 @@
 {# Allows the DOCTYPE to be set on a page by page basis #}
-{%- block doctype %}
-<!DOCTYPE html>{% endblock -%}
+{%- block doctype %}<!DOCTYPE html>{% endblock -%}
 
-{# Allows custom attributes to be added to the html tag #}
+{# Allows custom attributes to be added to the <html> tag #}
 {%- block htmltag -%}
 {% set lang = h.lang() %}
 <!--[if IE 9]> <html lang="{{ lang }}" class="ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="{{ lang }}">
-<!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="{{ lang }}"> <!--<![endif]-->
 {%- endblock -%}
 
-{# Allows custom attributes to be added to the <head> tag #}
-<head{% block headtag %}{% endblock %}>
-  {#
+  {# Allows custom attributes to be added to the <head> tag #}
+  <head{% block headtag %}{% endblock %}>
+    {#
     Add custom meta tags to the page. Call super() to get the default tags
     such as charset, viewport and generator.
 
@@ -25,15 +22,13 @@
     {% endblock %}
 
     #}
-  {%- block meta -%}
-  <meta charset="utf-8" />
-  {% block meta_generator %}
-  <meta name="generator" content="ckan {{ h.ckan_version() }}" />{% endblock %}
-  {% block meta_viewport %}
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">{% endblock %}
-  {%- endblock -%}
+    {%- block meta -%}
+      <meta charset="utf-8" />
+      {% block meta_generator %}<meta name="generator" content="ckan {{ h.ckan_version() }}" />{% endblock %}
+      {% block meta_viewport %}<meta name="viewport" content="width=device-width, initial-scale=1.0">{% endblock %}
+    {%- endblock -%}
 
-  {#
+    {#
     Add a custom title to the page by extending the title block. Call super()
     to get the default page title.
 
@@ -42,59 +37,45 @@
       {% block title %}My Subtitle - {{ super() }}{% endblock %}
 
     #}
-  <title>
-    {%- block title -%}
-    {%- block subtitle %}{% endblock -%}
-    {%- if self.subtitle()|trim %} {{ g.template_title_deliminater }} {% endif -%}
-    {{ g.site_title }}
-    {%- endblock -%}
-  </title>
+    <title>
+      {%- block title -%}
+        {%- block subtitle %}{% endblock -%}
+        {%- if self.subtitle()|trim %} {{ g.template_title_deliminater }} {% endif -%}
+        {{ g.site_title }}
+      {%- endblock -%}
+    </title>
 
-  {#
+    {#
     The links block allows you to add additonal content before the stylesheets
     such as rss feeds and favicons in the same way as the meta block.
     #}
-  {% block links -%}
-  <link rel="shortcut icon" href="{{ g.favicon }}" />
-  {% endblock -%}
+    {% block links -%}
+      <link rel="shortcut icon" href="{{ g.favicon }}" />
+    {% endblock -%}
 
-  {#
-    The styles block allows you to add additonal stylesheets to the page in
-    the same way as the meta block. Use super() to include the default
-    stylesheets before or after your own.
-
-    Example:
-
+    {% ckan_extends %}
       {% block styles %}
         {{ super() }}
-        <link rel="stylesheet" href="/base/css/custom.css" />
+        <link rel="stylesheet" href="/base/css/style_granada.css" />
+        <link rel="stylesheet" href="/style_granada.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap" rel="stylesheet">
       {% endblock %}
-    #}
-  {%- block styles %}
-  {% resource g.main_css[6:] %}
-  {% endblock %}
+   
+    <!-- {%- block stylescustom %}
+      {% if h.is_rtl_language() %}{% resource h.get_rtl_css()[6:] %}{% else %}{% resource g.main_css[6:] %}{% endif %}
+    {% endblock %} -->
 
-  {% block head_extras %}
-  {# defined in the config.ini under "ckan.template_head_end" #}
-  {{ g.template_head_end | safe }}
-  {% endblock %}
+    {% block head_extras %}
+      {# defined in the config.ini under "ckan.template_head_end" #}
+      {{ g.template_head_end | safe }}
+    {% endblock %}
 
-  {%- block custom_styles %}
-  {%- if g.site_custom_css -%}
-  <style>
-    {
-        {
-        g.site_custom_css | safe
-      }
-    }
-  </style>
-  {%- endif %}
-  {% endblock %}
   </head>
 
   {# Allows custom attributes to be added to the <body> tag #}
-  <body{% block bodytag %} data-site-root="{{ h.url_for('/', locale='default', qualified=true) }}"
-    data-locale-root="{{ h.url_for('/', qualified=true) }}" {% endblock %}>
+  <body{% block bodytag %} data-site-root="{{ h.url_for('/', locale='default', qualified=true) }}" data-locale-root="{{ h.url_for('/', qualified=true) }}" {% endblock %}>
 
     {#
     The page block allows you to add content to the page. Most of the time it is
@@ -108,13 +89,7 @@
         <div>Some other page content</div>
       {% endblock %}
     #}
-
-    {%- block page %}
-    {% endblock -%}
-
-    {% block popup %}
-    {% snippet 'snippets/popup_privacy.html' %}
-    {% endblock %}
+    {%- block page %}{% endblock -%}
 
     {#
     DO NOT USE THIS BLOCK FOR ADDING SCRIPTS
@@ -122,12 +97,13 @@
     circumstances
     #}
     {%- block scripts %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/base/js/ckan.js"></script>
     {% endblock -%}
 
     {% block body_extras -%}
-    {# defined in the config.ini under "ckan.template_footer_end" #}
-    {{ g.template_footer_end | safe }}
+      {# defined in the config.ini under "ckan.template_footer_end" #}
+      {{ g.template_footer_end | safe }}
     {%- endblock %}
-    </body>
-
+  </body>
 </html>

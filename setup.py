@@ -17,15 +17,15 @@ setup(
     # http://packaging.python.org/en/latest/tutorial.html#version
     version='0.0.1',
 
-    description='''A styling extension for CKAN''',
+    description='''up granada''',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/Ubiwhere/ckanext-style_granada',
+    url='https://github.com/icsilva/ckanext-style_granada',
 
     # Author details
-    author='''Ubiwhere''',
-    author_email='''hello@ubiwhere.com''',
+    author='''ubiwhere''',
+    author_email='''icsilva@ubiwhere.com''',
 
     # Choose your license
     license='AGPL',
@@ -48,7 +48,7 @@ setup(
 
 
     # What does your project relate to?
-    keywords='''CKAN UPGranada Styling''',
+    keywords='''CKAN up''',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
