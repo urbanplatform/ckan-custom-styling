@@ -328,3 +328,47 @@ div[role="main"] {
     padding-top: 30px;
     font-family: 'Gotham', sans-serif !important;
 }
+a.accordion-toggle {
+    border: 1px solid #428bca;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    background: aliceblue;
+    color: #428bca;
+    text-decoration: none;
+    margin-bottom:5px;
+}
+.accordion-inner {
+    padding: 15px 15px 20px;
+    background: #f1f1f1;
+    margin-bottom: 15px;
+    border-radius: 0 0 5px 5px;
+    margin-top: -5px;
+}
+a.accordion-toggle {
+    border: 0px solid #2E479A;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    background: aliceblue;
+    color: #2E479A;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+a.accordion-toggle {
+    background: #2E479A;
+    color: #fff;
+    border-color: #2E479A;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+a.accordion-toggle.collapsed {
+    background: aliceblue;
+    color: #2E479A;
+}
+.nav-tabs > li.active > a, .module-content .nav-tabs > li > a {
+    padding:10px;
+}
