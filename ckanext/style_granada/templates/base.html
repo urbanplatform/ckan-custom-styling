@@ -50,7 +50,7 @@
     such as rss feeds and favicons in the same way as the meta block.
     #}
     {% block links -%}
-      <link rel="shortcut icon" href="{{ g.favicon }}" />
+      <link rel="shortcut icon" href="/base/images/favicon.ico" />
     {% endblock -%}
 
     {% ckan_extends %}
@@ -60,7 +60,6 @@
         <link rel="stylesheet" href="/style_granada.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap" rel="stylesheet">
       {% endblock %}
    
     <!-- {%- block stylescustom %}

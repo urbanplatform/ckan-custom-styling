@@ -328,3 +328,75 @@ div[role="main"] {
     padding-top: 30px;
     font-family: 'Gotham', sans-serif !important;
 }
+a.accordion-toggle {
+    border: 1px solid #428bca;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    background: aliceblue;
+    color: #428bca;
+    text-decoration: none;
+    margin-bottom:5px;
+}
+.accordion-inner {
+    padding: 15px 15px 20px;
+    background: #f1f1f1;
+    margin-bottom: 15px;
+    border-radius: 0 0 5px 5px;
+    margin-top: -5px;
+}
+a.accordion-toggle {
+    border: 0px solid #2E479A;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    background: aliceblue;
+    color: #2E479A;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+a.accordion-toggle {
+    background: #2E479A;
+    color: #fff;
+    border-color: #2E479A;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+a.accordion-toggle.collapsed {
+    background: aliceblue;
+    color: #2E479A;
+}
+.nav-tabs > li.active > a, .module-content .nav-tabs > li > a {
+    padding:10px;
+}
+.group-list.module:first-child .module-heading {
+    border-top-width: 0;
+    padding: 24px;
+    border-radius: 4px;
+    background: #fff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.group-list.module:first-child .module-heading .module-image {
+    float: left;
+    width: 64px;
+    height: 64px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 15px;
+    background: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.group-list.module:first-child .module-heading .module-image img {
+    max-width: 64px;
+    max-height: 50px;
+    vertical-align: middle;
+}
