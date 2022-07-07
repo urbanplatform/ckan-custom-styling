@@ -400,3 +400,14 @@ a.accordion-toggle.collapsed {
     max-height: 50px;
     vertical-align: middle;
 }
+
+.label {
+    display: inline-block !important;
+    padding: 5px !important;
+    height: 20px !important;
+    line-height: 12px !important;
+}
+
+.dataset-heading a {
+    display: flex;
+}
