@@ -6,6 +6,16 @@ $(document).ready(function(){
 
     var w_url = window.location.href.split('/')[3];
 
+    if(w_url == 'es'){
+        $('.homepage .col1 header > p').text('Este es un buen párrafo introductorio sobre CKAN o el sitio en general. Todavía no tenemos ninguna copia para ir aquí, pero pronto lo haremos');
+    }
+
+    if(w_url == 'es_AR'){
+        $('.homepage .col1 header > p').text('Este es un buen párrafo introductorio sobre CKAN o el sitio en general. Todavía no tenemos ninguna copia para ir aquí, pero pronto lo haremos');
+    }
+
+    $('.homepage .img-responsive').attr('src', '/base/images/code.jpg');
+
     if(!w_url || w_url == 'dataset' || w_url == 'group' || w_url == 'about' || w_url == 'organization'){
         $('form.lang-select').before('<div class="newLang"><img src="'+window.location.origin +'/base/images/paises/es.svg"></div>')
     }

@@ -312,6 +312,7 @@ div[role="main"] {
 .footer .logos img {
     margin: 20px;
     object-fit: contain;
+    max-width: 420px;
 }
 .footer {
     z-index: 100;
